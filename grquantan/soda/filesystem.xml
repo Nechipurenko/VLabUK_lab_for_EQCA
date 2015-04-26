@@ -1,0 +1,33 @@
+<?xml version="1.0" standalone="yes"?>
+
+<FILESYSTEM>
+	<DIRECTORY name="Irydium Solutions">
+		<SOLUTION name="H&lt;sub&gt;2&lt;/sub&gt;O" description="Дистильована вода" volume="2.5" vessel="3lCarboy">
+			<SPECIES_REF id="0"/>
+		</SOLUTION>
+		<DIRECTORY name="Сильні кислоти">
+			<SOLUTION name="0.1M HCl (K=1.032)" description="Хлоридна кислота, приблизно 0.1 моль/л" volume="0.1" vessel="100mlBottle">
+				<SPECIES_REF id="0"/>
+				<SPECIES_REF amount="0.01032" id="3"/>
+				<SPECIES_REF amount="0.01032" id="1"/>
+			</SOLUTION>
+		</DIRECTORY>
+		<DIRECTORY name="Індикатори">
+			<SOLUTION name="Метилоранж" description="Розчин індикатору метилового оранжевого" volume="0.1" vessel="100mlBottle">
+				<SPECIES_REF id="0"/>
+				<SPECIES_REF amount="3.0E-4" id="10"/>
+				<SPECIES_REF amount="3.0E-4" id="4"/>
+			</SOLUTION>
+		</DIRECTORY>
+	</DIRECTORY>
+	<DIRECTORY name="Зразки соди">
+		<FILE href="problem_description.html" description="Опис завдання">Опис завдання</FILE>
+		<SOLUTION name="NaHCO&lt;sub&gt;3&lt;/sub&gt;" description="Кристалічний натрій гідрогенкарбонат" volume="0.0" vessel="SolidBottle">
+			<SPECIES_REF amount="1.5" id="8"/>
+		</SOLUTION>
+		<SOLUTION name="Питна сода" description="Зразок питної соди для аналізу" volume="0.0" vessel="SolidBottle">
+			<SPECIES_REF amount="1.49" id="8"/>
+			<SPECIES_REF amount="0.01" id="11"/>
+		</SOLUTION>
+	</DIRECTORY>
+</FILESYSTEM>

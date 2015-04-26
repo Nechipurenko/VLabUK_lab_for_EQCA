@@ -1,0 +1,23 @@
+<?xml version="1.0" standalone="yes"?>
+
+<VIRTUALLAB version="1.5.0">
+	<TITLE>Задача про невідому концентрацію</TITLE>
+	<AUTHOR>Майк Карабінос</AUTHOR>
+	<DESCRIPTION>Визначення концентрації йонів Аргентуму у розчині аргентум нітрату.</DESCRIPTION>
+	<SOLUTION_VIEWERS>
+		<VIEWER honorSignificantFigures="false" name="Властивості речовин/розчинів" enabled="true" driver="irydium.vlab.viewer.PropertiesPanel"/>
+		<VIEWER sEnabled="true" aqEnabled="true" name="Перегляд речовин" enabled="true" gEnabled="true" driver="irydium.vlab.viewer.SpeciesViewer"/>
+		<VIEWER name="Термометр" enabled="true" driver="irydium.vlab.viewer.Thermometer"/>
+		<VIEWER name="pH-метр" enabled="true" driver="irydium.vlab.viewer.PhViewer"/>
+	</SOLUTION_VIEWERS>
+	<TRANSFERBAR>
+		<MODEL name="Перенесення точних кількостей" enabled="true" driver="irydium.vlab.transfer.PreciseTransferModel"/>
+		<MODEL name="Перенесення округлених кількостей" enabled="true" driver="irydium.vlab.transfer.SignificantFiguresTransferModel"/>
+		<MODEL name="Реалістичне перенесення" enabled="true" driver="irydium.vlab.transfer.RealisticTransferModel"/>
+	</TRANSFERBAR>
+	<KNOWLEDGEBASE reactions="silver/reactions.xml" species="silver/species.xml" driver="irydium.textRealm.TextKnowledgebase"/>
+	<REALM name="silver" driver="irydium.textRealm.TextRealm" filesystem="silver/filesystem.xml"/>
+	<STOCKROOM>
+		<MOUNT realm="silver" path="/Irydium Solutions">Irydium Solutions</MOUNT>
+	</STOCKROOM>
+</VIRTUALLAB>

@@ -1,0 +1,24 @@
+<?xml version="1.0" standalone="yes"?>
+
+<VIRTUALLAB version="1.5.0">
+	<TITLE>Аналіз питної соди</TITLE>
+	<AUTHOR>Павло Нечипуренко</AUTHOR>
+	<DESCRIPTION>Визначення вмісту натрій гідрогенкарбонату у питній соді методом кислотно-основного титрування.</DESCRIPTION>
+	<SOLUTION_VIEWERS>
+		<VIEWER honorSignificantFigures="false" enabled="true" name="Властивості речовин/розчинів" driver="irydium.vlab.viewer.PropertiesPanel"/>
+		<VIEWER sEnabled="true" aqEnabled="true" enabled="false" name="Перегляд речовин" gEnabled="true" driver="irydium.vlab.viewer.SpeciesViewer"/>
+		<VIEWER enabled="true" name="Термометр" driver="irydium.vlab.viewer.Thermometer"/>
+		<VIEWER enabled="true" name="pH-метр" driver="irydium.vlab.viewer.PhViewer"/>
+	</SOLUTION_VIEWERS>
+	<TRANSFERBAR>
+		<MODEL enabled="false" name="Перенесення точних кількостей" driver="irydium.vlab.transfer.PreciseTransferModel"/>
+		<MODEL enabled="false" name="Перенесення округлених кількостей" driver="irydium.vlab.transfer.SignificantFiguresTransferModel"/>
+		<MODEL enabled="true" name="Реалістичне перенесення" driver="irydium.vlab.transfer.RealisticTransferModel"/>
+	</TRANSFERBAR>
+	<KNOWLEDGEBASE reactions="soda/reactions.xml" species="soda/species.xml" driver="irydium.textRealm.TextKnowledgebase"/>
+	<REALM name="soda" driver="irydium.textRealm.TextRealm" filesystem="soda/filesystem.xml"/>
+	<STOCKROOM>
+		<MOUNT realm="soda" path="/Irydium Solutions">Irydium Solutions</MOUNT>
+		<MOUNT realm="soda" path="/Зразки соди">Зразки соди</MOUNT>
+	</STOCKROOM>
+</VIRTUALLAB>
